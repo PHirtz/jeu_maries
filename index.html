@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>💍 Escape Game Mariage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Pétales décoratives -->
+<div class="petals-bg" id="petalsBg"></div>
+
+<div class="app">
+
+  <!-- ===== Écran de choix du joueur ===== -->
+  <div id="playerSelect" class="player-select-screen">
+    <div class="logo-ring">💍</div>
+    <h1 class="main-title">Clémence & Alex<br><em>Votre jeu</em></h1>
+    <p class="subtitle">Choisissez votre parcours</p>
+    <div class="player-cards">
+      <div class="player-card" onclick="startGame('alex')">
+        <span class="player-icon">🤵</span>
+        <div class="player-name">Alex</div>
+        <div class="player-hint">Le marié</div>
+      </div>
+      <div class="player-card" onclick="startGame('clemence')">
+        <span class="player-icon">👰</span>
+        <div class="player-name">Clémence</div>
+        <div class="player-hint">La mariée</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Jeu principal ===== -->
+  <div id="gameScreen" class="game-screen hidden">
+
+    <header>
+      <div class="header-left">
+        <span id="playerBadge" class="player-badge"></span>
+      </div>
+      <div class="header-right">
+        <span id="scoreBadge" class="score-badge">⭐ 0 pts</span>
+        <span id="timerBadge" class="timer-badge" style="display:none;">⏱ 01:30</span>
+        <span id="progress"   class="progress-badge"></span>
+      </div>
+    </header>
+
+    <div class="card" id="card">
+      <div class="card-top">
+        <div id="lock" class="lock-icon">🔒</div>
+        <div class="step-label" id="stepLabel"></div>
+      </div>
+
+      <h2 id="title"       class="card-title"></h2>
+      <p  id="description" class="card-desc"></p>
+
+      <div id="gameContent" class="game-content"></div>
+
+      <!-- Boîte d'indice (cachée par défaut) -->
+      <div id="hintBox" class="hint-box" style="display:none;"></div>
+
+      <button onclick="validate()" id="validateBtn" class="btn-main">🔓 Déverrouiller</button>
+
+      <!-- Bouton indice manuel -->
+      <button id="hintBtn" class="btn-hint" style="display:none;"
+        onclick="showHint(getSteps()[current])">
+        💡 Voir un indice
+      </button>
+
+      <p id="feedback" class="feedback"></p>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
