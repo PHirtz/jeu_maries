@@ -564,19 +564,17 @@ header {
 /* ===== PUZZLE ===== */
 .puzzle-container {
   display: grid;
-  gap: 3px;
   margin: 10px auto;
 }
 .puzzle-piece {
   cursor: pointer;
-  border-radius: 6px;
-  border: 1px solid rgba(196,168,130,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .puzzle-piece:hover  { border-color: var(--accent); z-index: 1; filter: brightness(1.05); }
-.puzzle-piece.selected { outline: 2px solid var(--accent); box-shadow: 0 0 12px rgba(212,132,154,0.35); }
+.puzzle-piece.selected { outline: 2px solid var(--accent); box-shadow: 0 0 12px rgba(0, 0, 0, 0.35); }
 
 /* ===== VICTOIRE ===== */
 .victory-card {
