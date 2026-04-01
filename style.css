@@ -329,8 +329,9 @@ header {
 .card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
+  gap: 12px;
 }
 
 .lock-icon {
@@ -358,6 +359,7 @@ header {
   color: var(--gold-light);
   letter-spacing: 0.08em;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 /* CORRECTION : whitespace pre-line pour les retours à la ligne dans les intros */
@@ -369,6 +371,7 @@ header {
   line-height: 1.65;
   margin-bottom: 20px;
   white-space: pre-line;
+  text-align: center;
 }
 
 .game-content {

@@ -149,8 +149,8 @@ const stepsClemence = [
   {
     type: "intro",
     stepLabel: "",
-    title: "Chère Clémence…",
-    description: "Avant de dire oui et de vivre le plus beau jour de ta vie, quelques petits défis t'attendent.\n\nProuve que tu connais votre histoire sur le bout des doigts. 💐",
+    title: "Félicitations Clémence…",
+    description: "Tu viens de dire oui et de vivre le plus beau jour de ta vie… ✨\n\nMaintenant, quelques petits défis t'attendent.\n\nProuve que tu connais votre histoire sur le bout des doigts. 💐",
     btnLabel: "C'est parti !"
   },
   {
@@ -161,63 +161,97 @@ const stepsClemence = [
     code: "04"
   },
   {
-    type: "quiz",
+    type: "puzzle",
     stepLabel: "Étape 2",
-    title: "Lui ou pas lui ?",
-    description: "Quel est le vrai prénom complet de ton futur mari ?",
-    options: ["Alexandre","Alexis","Alex","Axel"],
-    answer: "Alex"
+    title: "Mini lui ?",
+    image: "images/photo5.jpg",
+    size:3
+  },
+  {
+    type: "quiz",
+    stepLabel: "Étape 3",
+    title: "Zog Zog",
+    description: "Quels sont les buffs prodigués par les paladins dans ce petit jeu indé appelé World of Warcraft : ",
+    options: ["Bénédictions","Malnutrition","Déjection","Clarification"],
+    answer: "Bénédictions"
+  },
+  {
+    type: "image",
+    stepLabel: "Étape 4",
+    title: "Qui est-ce ?",
+    description: "",
+    image: "images/devinette4.png",
+    question: "Quel est le nom de ce personnage ?",
+    options: ["Koopa Troopa","Goomba","Maskass","Masqué"],
+    answer: "Maskass"
   },
   {
     type: "memory",
-    stepLabel: "Étape 3",
+    stepLabel: "Étape 5",
     title: "Petits bonheurs",
     description: "Retrouvez toutes les paires pour continuer.",
     pairs: [9,9,10,10,11,11,12,12]
   },
   {
     type: "code",
-    stepLabel: "Étape 4",
+    stepLabel: "Étape 6",
     title: "La couleur du jour",
-    description: "La couleur de tes fleurs, en 4 lettres.",
-    code: "ROSE"
+    description: "Je règne sur cette journée et je me glisse aussi dans les couleurs du CA Brive Corrèze ? (en 5 lettres)",
+    code: "BLANC"
+  },
+  {
+    type: "image",
+    stepLabel: "Étape 7",
+    title: "Qui est-ce ?",
+    description: "Question série US niche",
+    image: "images/devinette5.png",
+    question: "Qui est l'avocate amoureuse de Lincoln dans la série (bien trop ancienne) Prison Break ?",
+    options: ["Sara Tancredi","Veronica Donovan","Gretchen Morgan","D, la réponse D"],
+    answer: "Veronica Donovan"
+  },
+  {
+    type: "puzzle",
+    stepLabel: "Étape 8",
+    title: "L'ami des bêtes",
+    image: "images/photo6.jpg",
+    size:3
   },
   {
     type: "quiz",
-    stepLabel: "Étape 5",
-    title: "La destination",
-    description: "Où partez-vous en voyage de noces ?",
-    options: ["Toscane","Maldives","Grèce","Bali"],
-    answer: "Maldives"
+    stepLabel: "Étape 9",
+    title: "💕",
+    description: "Quelle hormone est libérée lors des câlins (on parle d'hormone) et renforce l'attachement ?",
+    options: ["Dopamine","Ocytocine","Cortisol","Insuline"],
+    answer: "Ocytocine"
+  }, 
+  {
+    type: "code",
+    stepLabel: "Étape 10",
+    title: "Le mammifère mystère",
+    description: "Je suis un mammifère de l'ordre des Proboscidiens\n\nMon cerveau pèse environ 5kg, l'un des plus gros parmi les animaux terrestres\n\nJe suis un symbole de sagesse et de mémoire dans de nombreuses cultures\n\nQui suis-je ? (en 8 lettres)",
+    code: "ELEPHANT"
+  },
+  {
+    type: "quiz",
+    stepLabel: "Étape 11",
+    title: "Manga peu connu",
+    description: "Combien de sabres utilise Zoro (le BG) ?",
+    options: ["2","3","4","5"],
+    answer: "3"
+  },
+  {
+    type: "puzzle",
+    stepLabel: "Étape 12",
+    title: "On avait pas Tchoupi",
+    image: "images/photo7.jpg",
+    size:3
   },
   {
     type: "memory",
-    stepLabel: "Étape 6",
-    title: "Doux souvenirs",
+    stepLabel: "Étape 13",
+    title: "Souvenirs partagés",
     description: "Encore quelques paires à retrouver…",
-    pairs: [1,1,3,3,5,5,7,7]
-  },
-  {
-    type: "code",
-    stepLabel: "Étape 7",
-    title: "Le serment",
-    description: "Un mot de 6 lettres que vous vous promettez l'un à l'autre.",
-    code: "TOUJOURS"
-  },
-  {
-    type: "quiz",
-    stepLabel: "Étape 8",
-    title: "Le dessert",
-    description: "Quel dessert avez-vous choisi pour le repas ?",
-    options: ["Pièce montée","Wedding cake","Tarte aux fruits","Croquembouche"],
-    answer: "Pièce montée"
-  },
-  {
-    type: "code",
-    stepLabel: "Étape 9",
-    title: "Le mot magique",
-    description: "Celui que tu as dit tout à l'heure, en 3 lettres, et qui changera ta vie.",
-    code: "OUI"
+    pairs: [5,5,6,6,7,7,8,8]
   }
 ];
 
@@ -464,10 +498,10 @@ function createQuizStep(step) {
     content.appendChild(img);
   }
 
-  // Question texte
-  if (step.question || step.description) {
+// Question texte
+  if (step.question) {
     const q = document.createElement("p");
-    q.innerText = step.question || step.description;
+    q.innerText = step.question;
     q.style.cssText = "text-align:center;margin-bottom:15px;font-style:italic;width:100%;";
     content.appendChild(q);
   }
@@ -641,6 +675,7 @@ function checkPuzzle() {
 // ============================================================
 function nextStep() {
   clearInterval(timerInterval);
+  console.log("currentPlayer =", currentPlayer);
   const card = document.getElementById("card");
   card.classList.add("hidden");
 
@@ -660,6 +695,12 @@ function showVictory() {
   clearInterval(timerInterval);
   const card = document.getElementById("card");
   const name = currentPlayer === "alex" ? "Alex" : "Clémence";
+
+  // Vidéo selon le joueur
+const videoSrc = currentPlayer === "alex"
+  ? "images/alex.mp4"
+  : "images/clemence.mp4";
+
   card.classList.remove("hidden");
   card.innerHTML = `
     <div class="victory-card">
@@ -667,11 +708,10 @@ function showVictory() {
       <h2>Félicitations, ${name} !</h2>
       <p>Tu as relevé tous les défis avec brio.<br>Score final : <strong>${score} pts</strong></p>
       <p style="margin-top:12px;font-style:italic;opacity:0.75;">
-        Tu pensais vraiment que le jeu était terminé ? Ce n'est que le début ... regarde la vidéo (avec du son c'est mieux !)
+        Tu pensais vraiment que le jeu était terminé ? <br>  Ce n'est que le début ... regarde la vidéo 🔊
       </p>
-      <!-- 🎬 VIDEO -->
       <video controls style="width:100%; margin-top:20px; border-radius:12px;">
-        <source src="images/clemence.mp4" type="video/mp4">
+        <source src="${videoSrc}" type="video/mp4">
         Ton navigateur ne supporte pas la vidéo.
       </video>
       <p style="margin-top:20px;font-size:2.2rem;letter-spacing:0.2em;">💍 🌹 💐</p>
