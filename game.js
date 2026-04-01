@@ -135,10 +135,10 @@ const stepsAlex = [
   {
     type: "image",
     stepLabel: "Étape finale",
-    title: "Qui est-ce ?",
+    title: "Vous vous êtes dit ?",
     description: "",
     image: "images/mariage.jpg",  // ← chemin vers ta photo
-    question: "Vous vous êtes dit ?",
+    question: "💕",
     options: ["oui","peut-être","D, la réponse D"],
     answer: "oui"
   }
@@ -257,10 +257,10 @@ const stepsClemence = [
   {
     type: "image",
     stepLabel: "Étape finale",
-    title: "💕",
+    title: "Vous vous êtes dit ?",
     description: "",
     image: "images/mariage.jpg",  // ← chemin vers ta photo
-    question: "Vous vous êtes dit ?",
+    question: "💕",
     options: ["oui","peut-être","D, la réponse D"],
     answer: "oui"
   }
