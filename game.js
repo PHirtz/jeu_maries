@@ -102,18 +102,8 @@ const stepsAlex = [
     code: "OUI"
   },
   {
-    type: "image",
-    stepLabel: "Étape 10",
-    title: "Qui est-ce ?",
-    description: "",
-    image: "images/devinette3.jpg",  // ← chemin vers ta photo
-    question: "Quel est le nom de ce stade ?",
-    options: ["Saint Symphorien","Amédée-Domenech","Stade de France","Gilbert Montagné"],
-    answer: "Amédée-Domenech"
-  },
-  {
     type: "puzzle",
-    stepLabel: "Étape 11",
+    stepLabel: "Étape 10",
     title: "Une photo, un souvenir",
     image: "images/photo3.jpg",
     size:3
@@ -126,22 +116,33 @@ const stepsAlex = [
     code: "Pikachu"
   },
   {
-    type: "puzzle",
+    type: "image",
+    stepLabel: "Étape 11",
+    title: "Qui est-ce ?",
+    description: "",
+    image: "images/devinette3.jpg",  // ← chemin vers ta photo
+    question: "Quel est le nom de ce stade ?",
+    options: ["Saint Symphorien","Amédée-Domenech","Stade de France","Gilbert Montagné"],
+    answer: "Amédée-Domenech"
+  },
+  {
+    type: "code",
     stepLabel: "Étape 13",
-    title: "Une photo, un souvenir",
-    image: "images/photo4.jpg",
-    size:3
+    title: "Voici la question 13",
+    description: "Quel est le 6ème nombre premier ?",
+    code: "13"
+  },
+  {
+    type: "image",
+    stepLabel: "Étape finale",
+    title: "Qui est-ce ?",
+    description: "",
+    image: "images/mariage.jpg",  // ← chemin vers ta photo
+    question: "Vous vous êtes dit ?",
+    options: ["oui","peut-être","D, la réponse D"],
+    answer: "oui"
   }
 ];
-const StepsAlex2 = [
-  {
-    type: "memory",
-    stepLabel: "Étape 9",
-    title: "Deux cœurs, une âme",
-    description: "Retrouvez toutes les paires pour continuer.",
-    pairs: [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12]
-  }
-]
 // ============================================================
 //  PARCOURS CLÉMENCE  (la mariée)
 // ============================================================
@@ -150,7 +151,7 @@ const stepsClemence = [
     type: "intro",
     stepLabel: "",
     title: "Félicitations Clémence…",
-    description: "Tu viens de dire oui et de vivre le plus beau jour de ta vie… ✨\n\nMaintenant, quelques petits défis t'attendent.\n\nProuve que tu connais votre histoire sur le bout des doigts. 💐",
+    description: "Tu viens de dire oui et de vivre le plus beau jour de ta vie… ✨\n\nMaintenant, quelques petits défis t'attendent.\n\n Bonne chance, mariée. 💐",
     btnLabel: "C'est parti !"
   },
   {
@@ -242,7 +243,7 @@ const stepsClemence = [
   {
     type: "puzzle",
     stepLabel: "Étape 12",
-    title: "On avait pas Tchoupi",
+    title: "On n'avait pas Tchoupi",
     image: "images/photo7.jpg",
     size:3
   },
@@ -252,6 +253,16 @@ const stepsClemence = [
     title: "Souvenirs partagés",
     description: "Encore quelques paires à retrouver…",
     pairs: [5,5,6,6,7,7,8,8]
+  },
+  {
+    type: "image",
+    stepLabel: "Étape finale",
+    title: "💕",
+    description: "",
+    image: "images/mariage.jpg",  // ← chemin vers ta photo
+    question: "Vous vous êtes dit ?",
+    options: ["oui","peut-être","D, la réponse D"],
+    answer: "oui"
   }
 ];
 
