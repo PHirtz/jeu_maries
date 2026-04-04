@@ -95,11 +95,14 @@ const stepsAlex = [
     pairs: [5,5,6,6,7,7,8,8]
   },
   {
-    type: "code",
+    type: "image",
     stepLabel: "Étape 9",
-    title: "Le serment final",
-    description: "Le mot que tu as prononcé tout à l'heure à la mairie.",
-    code: "OUI"
+    title: "Qui est-ce ?",
+    description: "",
+    image: "images/photo8.jpg",
+    question: "Qui suis-je ?",
+    options: ["SCH","Vlad","Thrall","Peppa"],
+    answer: "Thrall"
   },
   {
     type: "puzzle",
