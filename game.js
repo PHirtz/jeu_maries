@@ -137,7 +137,7 @@ const stepsAlex = [
     stepLabel: "Étape finale",
     title: "Vous vous êtes dit ?",
     description: "",
-    image: "images/mariage.jpg",  // ← chemin vers ta photo
+    image: "images/mariage.jpg",
     question: "💕",
     options: ["oui","peut-être","D, la réponse D"],
     answer: "oui"
@@ -259,7 +259,7 @@ const stepsClemence = [
     stepLabel: "Étape finale",
     title: "Vous vous êtes dit ?",
     description: "",
-    image: "images/mariage.jpg",  // ← chemin vers ta photo
+    image: "images/mariage.jpg",
     question: "💕",
     options: ["oui","peut-être","D, la réponse D"],
     answer: "oui"
